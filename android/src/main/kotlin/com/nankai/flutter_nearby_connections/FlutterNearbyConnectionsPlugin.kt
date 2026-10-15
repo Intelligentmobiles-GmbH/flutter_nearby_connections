@@ -18,7 +18,6 @@ import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import java.lang.Exception
-import kotlin.system.exitProcess
 
 
 const val SERVICE_ID = "flutter_nearby_connections"
@@ -156,7 +155,6 @@ class FlutterNearbyConnectionsPlugin : FlutterPlugin, MethodCallHandler, Activit
             serviceBindManager.unbindService()
         }
         locationHelper = null
-        exitProcess(0)
     }
 
     override fun onAttachedToActivity(binding: ActivityPluginBinding) {
